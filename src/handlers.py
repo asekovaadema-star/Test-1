@@ -76,7 +76,7 @@ async def handl_age(message: Message, state: FSMContext):
         await message.answer("Введите возраст числами （╬￣皿￣）")
 
 
-@router.callback_query(Registration.confirm, F.data == "confirm") # Замени confirm_reg на свой callback_data
+@router.callback_query(Registration.confirm, F.data == "confirm")
 async def confirm_registration(callback: CallbackQuery, state: FSMContext):
     data = await state.get_data()
     users_data[callback.from_user.id] = data 
