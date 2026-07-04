@@ -37,8 +37,8 @@ async def cmd_profile(message: Message):
         info = users_data[user_id]
         await message.answer(
             f"Ваш профиль (=`ω´=):\n"
-            "Имя: {info['name']}\n"
-            "Возраст: {info['age']}"
+            f"Имя: {info['name']}\n"
+            f"Возраст: {info['age']}"
         )
     else:
         await message.answer(
